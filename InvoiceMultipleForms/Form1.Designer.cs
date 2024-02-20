@@ -135,6 +135,7 @@
             btnChangePercent.TabIndex = 10;
             btnChangePercent.Text = "Change Percent";
             btnChangePercent.UseVisualStyleBackColor = true;
+            btnChangePercent.Click += btnChangePercent_Click;
             // 
             // btnCalculate
             // 
@@ -144,6 +145,7 @@
             btnCalculate.TabIndex = 11;
             btnCalculate.Text = "Calculate";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // btnExit
             // 
@@ -153,6 +155,7 @@
             btnExit.TabIndex = 12;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // frmInvoiceTotal
             // 
