@@ -22,10 +22,10 @@ namespace InvoiceMultipleForms
                 decimal taxed = subtotal * taxPercentage;
                 decimal total = taxed + subtotal;
 
-                txtDiscountAmount.Text = Convert.ToString(discount);
-                txtSubtotal.Text = Convert.ToString(subtotal);
-                txtTax.Text = Convert.ToString(taxed);
-                txtTotal.Text = Convert.ToString(total);
+                txtDiscountAmount.Text = discount.ToString("c");
+                txtSubtotal.Text = subtotal.ToString("c");
+                txtTax.Text = taxed.ToString("c");
+                txtTotal.Text = total.ToString("c");
             }
             catch (Exception ex)
             {
@@ -46,8 +46,8 @@ namespace InvoiceMultipleForms
 
             if (result == DialogResult.OK)
             {
-                taxPercentage = Convert.ToDecimal(salesTax.Tag);
-                lblTax.Text = $"Tax ({taxPercentage}%):";
+                taxPercentage = Convert.ToDecimal(salesTax.Tag)/100;
+                lblTax.Text = $"Tax ({taxPercentage*100}%):";
             }
         }
     }
